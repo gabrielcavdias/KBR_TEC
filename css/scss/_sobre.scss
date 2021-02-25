@@ -1,0 +1,78 @@
+.sobre{
+    margin-bottom: 15rem;
+    display: flex;
+    justify-content: space-around;
+    .arredondado--sobre{
+        background-color: $sec-color;
+        transform: rotate(45deg);
+        position: relative;
+        &__grande{
+            width: 315px;
+            height: 315px;
+            z-index: 2;
+            bottom: 33rem;
+            left: 4rem;
+        }
+        &__pequeno{
+            border-radius: 30px;
+            width: 130px;
+            height: 130px;
+            z-index: 1;
+            bottom: 68rem;
+        }
+    }
+    &__img-arredondada{
+        background-image: url(../../img/image_38.jpg);
+        width: 459px;
+        height: 542px;
+        border-radius: 20px;
+        position: relative;
+        z-index: 3;
+        left: 12rem;
+    }
+    &__quem-sou{
+        width: 50%;
+        h2{
+            font-family: $ff-secondary;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+        &--subtitulo{
+            display: inline-block;
+            width: 60%;
+            font-family: $ff-secondary;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 3rem 0;
+        }
+        p{
+            font-family: $ff-primary;
+            line-height: 2rem;
+            letter-spacing: 1.3px;
+            width: 75%;
+            strong{
+                display: block;
+            }
+        }
+    }
+    &__social-media{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        left: 12rem;
+        top: 2rem;
+        .fa{
+            text-decoration: none;
+            padding: 20px;
+            color: #fff;
+            background-image: $gradiente01;
+            border-radius: 100px;
+            &:hover{
+                background-image: $gradiente02; 
+            }
+        }
+    }
+}

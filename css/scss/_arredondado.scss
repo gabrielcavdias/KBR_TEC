@@ -1,0 +1,12 @@
+.arredondado{
+    border-radius: 57px;
+    width: 374px;
+    height: 374px;
+}
+.arredondado--logo{
+    background-image: $gradiente01;
+    transform: rotate(45deg);
+    position: relative;
+    bottom: 180px;
+    right: 60px;
+}

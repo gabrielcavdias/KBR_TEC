@@ -1,0 +1,10 @@
+/*Cores e gradientes*/
+$main-color: #1D737E;
+$sec-color: #C2FF01;
+$gradiente01: linear-gradient($main-color, lighten($main-color, 10), lighten($main-color, 15));
+$gradiente02: linear-gradient($main-color, lighten($main-color, 20), lighten($main-color, 25));
+
+/*Font Family*/
+$ff-primary: 'Fira Sans', sans-serif;
+$ff-secondary: 'Oswald', sans-serif;
+$ff-btn: 'Source Sans Pro', sans-serif;

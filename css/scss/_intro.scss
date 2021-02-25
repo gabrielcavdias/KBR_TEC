@@ -1,0 +1,117 @@
+/*Header*/
+
+header{
+    background-image: linear-gradient(to right top, lighten($main-color,80) 65%, $main-color 115%);
+    display: grid;
+    grid-template-areas:
+    "logo intro intro  intro intro infos"
+    ".... intro intro  intro intro  ....."
+    ".... intro intro  intro intro  .....";
+}
+.header__logo{
+    grid-area: logo;
+    h1 span{
+        display: none;
+    }
+}
+.header__infos{
+    margin-top: 1.5rem;
+    grid-area: infos;
+    button{
+        position: relative;
+        right: 4rem;
+    }
+    img{
+        position: relative;
+        bottom: 2rem;
+        left: 9rem;
+        width: 30px;
+    }
+}
+.header__img{
+    position: relative;
+    position: absolute;
+    top: 1rem;
+    left: 5rem;
+}
+.header__btn{
+    background-image: $gradiente01;
+    padding: 15px 20px;
+    color: $sec-color;
+    font-weight: 700;
+    font-size: 0.94rem;
+    &:hover{
+        background-image: linear-gradient($main-color, lighten($main-color, 15), lighten($main-color, 25));
+        color: lighten($sec-color, 20);
+        transition: 0.5s;
+    }
+    &:active{
+        background-image: linear-gradient($main-color, darken($main-color, 1), darken($main-color, 2));
+    }
+}
+
+/*Parte Principal da página introdutória*/
+.intro{
+    display: flex;
+    padding: 10px;
+    position: relative;
+    top: 150px;
+    grid-area: intro;
+    &__apresentacao__texto{
+        font-family: $ff-secondary;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-size: 1.87rem;
+        margin-right: 30%;
+    }
+    &__apresentacao__pequeno-texto{
+        font-family: $ff-primary;
+        font-size: 0.9rem;
+        margin: 2rem 0;
+        width: 50%;
+    }
+    &__destaque{
+        display: inline-block;
+        background-color: #000;
+        padding: 2px;
+        border-radius: 10px;
+        text-align: center;
+        color: $sec-color;
+    }
+    &__arredondado{
+        &--branco{
+            background-color: white;
+            z-index: 1;
+            bottom: 62rem;
+            right: 2rem;
+        }
+        &--gradiente{
+            background-image: $gradiente02;
+            z-index: 2;
+            bottom: 38.5rem;
+        }
+        &--foto{
+            background-image: url(../../img/image_26.jpg);
+            z-index: 3;
+            bottom: 16rem;
+            left: 3rem;
+        }
+        &--borda{
+            border: 1px solid $sec-color;
+            z-index: 4;
+            top: 8rem;
+            left: 6rem;
+        }
+    }
+}
+.intro__arredondados{
+    position: relative;
+    height: 100vh;
+    bottom: 3rem;
+    left: 4rem;
+}
+.intro__arredondados>div{
+    transform: rotate(45deg);
+    position: relative;
+}
