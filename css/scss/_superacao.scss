@@ -1,0 +1,59 @@
+.superacao{
+    display: grid;
+    min-width: 100vw;
+    min-height: 80vh;
+    &__palestra{
+        background-image: url(../../img/img_22.jpg);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+        font-weight: 700;
+        &__logo{
+            display: flex;
+            gap: 30px;
+            &__img{
+                max-height: 10%;
+            }
+            &__titulo{
+                font-family: $ff-secondary;
+                line-height: 2rem;
+                font-size: 1.6rem;
+                align-self: center;
+                letter-spacing: 2px;
+            }
+        }
+        &__texto{
+            max-width: 40%;
+            font-family: $ff-primary;
+            line-height: 1.5rem;
+            &--destaque{
+                color: $sec-color;
+            }
+        }
+    }
+    &__exemplo{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &__texto{
+            font-family: $ff-primary;
+            line-height: 2rem;
+            max-width: 40%;
+            p:first-of-type{
+                margin-bottom: 25px;
+            }
+        }
+        &__slogan{
+            display: flex;
+            p{
+                font-family: $ff-secondary;
+                font-size: 2rem;
+                font-weight: 700;
+                span{
+                    display: block;
+                }
+            }
+        }
+    }
+}

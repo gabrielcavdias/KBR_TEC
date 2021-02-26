@@ -1,5 +1,5 @@
 .sobre{
-    margin-bottom: 15rem;
+    max-height: 100vh;
     display: flex;
     justify-content: space-around;
     .arredondado--sobre{
@@ -9,7 +9,7 @@
         &__grande{
             width: 315px;
             height: 315px;
-            z-index: 2;
+            z-index: -1;
             bottom: 33rem;
             left: 4rem;
         }
@@ -17,17 +17,16 @@
             border-radius: 30px;
             width: 130px;
             height: 130px;
-            z-index: 1;
             bottom: 68rem;
         }
     }
     &__img-arredondada{
         background-image: url(../../img/image_38.jpg);
-        width: 459px;
-        height: 542px;
+        min-width: 459px;
+        min-height: 542px;
         border-radius: 20px;
         position: relative;
-        z-index: 3;
+        z-index: 1;
         left: 12rem;
     }
     &__quem-sou{
@@ -64,14 +63,19 @@
         position: relative;
         left: 12rem;
         top: 2rem;
-        .fa{
+        max-width: 70%;
+        margin: 0 auto;
+        a{
             text-decoration: none;
-            padding: 20px;
             color: #fff;
+            padding: 10px 20px;
             background-image: $gradiente01;
-            border-radius: 100px;
+            border-radius: 50%;
             &:hover{
                 background-image: $gradiente02; 
+            }
+            i{
+                font-size: 1.5rem;
             }
         }
     }

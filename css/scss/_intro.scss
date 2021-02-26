@@ -56,7 +56,11 @@ header{
     padding: 10px;
     position: relative;
     top: 150px;
+    min-height: 100vh;
     grid-area: intro;
+    &__apresentacao{
+        z-index: 1;
+    }
     &__apresentacao__texto{
         font-family: $ff-secondary;
         font-weight: 700;

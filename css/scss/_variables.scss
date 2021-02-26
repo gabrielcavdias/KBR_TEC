@@ -3,6 +3,8 @@ $main-color: #1D737E;
 $sec-color: #C2FF01;
 $gradiente01: linear-gradient($main-color, lighten($main-color, 10), lighten($main-color, 15));
 $gradiente02: linear-gradient($main-color, lighten($main-color, 20), lighten($main-color, 25));
+$gradiente03: linear-gradient(to right, $main-color, lighten($main-color, 20), lighten($main-color, 25));
+$gradiente04: linear-gradient(to right, $sec-color, lighten($sec-color, 20), lighten($sec-color, 25));
 
 /*Font Family*/
 $ff-primary: 'Fira Sans', sans-serif;

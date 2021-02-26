@@ -1,0 +1,98 @@
+.inscricao{
+    display: grid;
+    grid-template-areas: 
+    "........... . titulo titulo titulo titulo . ."
+    "arredondado . etps01 etps01 etps01 etps01 . ."
+    "........... . etps02 etps02 etps02 etps02 . .";
+    h2{
+        font-family: $ff-secondary;
+        font-weight: 700;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        margin: 2rem 0;
+        grid-area: titulo;
+    }
+    .arredondado--inscricao{
+        background-color: $sec-color;
+        border-radius: 20%;
+        transform: rotate(45deg);
+        width: 130px;
+        height: 130px;
+        position: relative;
+        grid-area: arredondado;
+    }
+    &__etapas{
+        display: flex;
+        justify-content: space-around;
+        margin: 2rem auto;
+        max-width: 80%;
+        &__etapa{
+            width: 360px;
+            div{
+                font-family: $ff-secondary;
+                font-weight: 900;
+                font-size: 1.6rem;
+                text-align: center;
+                position: relative;
+                .arredondado--etapa{
+                    background-color: $sec-color;
+                    position: absolute;
+                    margin: 0 auto;
+                    border-radius: 20%;
+                    transform: rotate(45deg);
+                    left: 43%;
+                    z-index: -2;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            p{
+                font-family: $ff-primary;
+                max-width: 60%;
+                text-align: center;
+                margin: 1rem auto;
+            }
+        }
+        .inscreva{
+            background-image: $gradiente02;
+            z-index: 1;
+            border-radius: 20px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            .arredondados__container{
+                left: 5rem;
+                top: 1rem;
+                .arredondado--inscreva{
+                    border-radius: 20%;
+                    transform: rotate(45deg);
+                    border: 1px solid rgba($color: #fff, $alpha: 0.4);
+                    width: 80px;
+                    height: 80px;
+                    position: absolute;
+                    z-index: -2;
+                }
+                .arredondado--inscreva:nth-of-type(2){
+                    left: 2rem;
+                }
+            }
+            .btn{
+                font-size: 1rem;
+                padding: 10px 40px;
+                z-index: 2;
+                align-self: center;
+            }
+        }
+    }
+    //O Etapas não é o primeiro do tipo porque tem uma div "arredondado" antes
+    //Etapas 01 até 04
+    &__etapas:nth-of-type(2){
+        grid-area: etps01;
+    }
+    //Etapas 05 até 07 e botão de inscreva-se
+    &__etapas:nth-of-type(3){
+        grid-area: etps02;
+    }
+}

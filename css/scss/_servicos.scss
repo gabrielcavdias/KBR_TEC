@@ -1,0 +1,62 @@
+.servicos{
+    &__tipos-servicos{
+        &__titulo{
+            font-family: $ff-secondary;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+        }
+        &__container{
+            margin: 2rem auto;
+            display: flex;
+            justify-content: space-around;
+            max-width: 80%;
+            .servico{
+                h3{
+                    font-family: $ff-primary;
+                    text-align: center;
+                    max-width: 60%;
+                    margin: 0 auto;
+                    span{
+                        font-weight: normal;
+                        color: $main-color;
+                    }
+                }
+                img{
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    &__palestra{
+        background-image: url(../../img/img_22.jpg);
+        min-height: 40vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &__texto{
+            max-width: 40%;
+            color: #fff;
+            h2{
+                font-family: $ff-secondary;
+                line-height: 2rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                span{
+                    display: block;
+                }
+            }
+            &--destaque{
+                color: $sec-color;
+            }
+            p{
+                margin-top: 1rem;
+                max-width: 65%;
+                font-family: $ff-primary;
+            }
+           
+        }
+    }
+}

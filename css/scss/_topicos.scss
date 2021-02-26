@@ -1,0 +1,89 @@
+.topicos{
+    margin: 3rem 0;
+    display: flex;
+    min-height: 140vh;
+    &__preto{
+        background-color: #000;
+        padding-left: 10%;
+        &__lancamento{
+            margin: 0;
+            background-image: linear-gradient(to left, rgb(23, 23, 23) , #000 80%);
+            z-index: 1;
+            .arredondados{
+                display: flex;
+                position: relative;
+                z-index: 2;
+                right: 8rem;
+                .arredondado{
+                    width: 250px;
+                    height: 250px;
+                    border: 1px solid rgba($color: $main-color, $alpha: 0.3);
+                    transform: rotate(45deg);
+                    position: absolute;
+                    z-index: -1;
+                }
+                .arredondado:nth-child(2){
+                    left: -4rem;
+                    border: 1px solid rgba($color: $main-color, $alpha: 0.2);                        
+                }
+            }
+        }
+    }
+    &__gradiente{
+        background-image: $gradiente01;
+        padding-left: 5%;
+    }//Gradiente
+
+    .topico{
+        color: #fff;
+        max-width: 50vw;
+        padding-bottom: 2.5rem;
+        >*:not(button){
+            padding: 5px 20px;
+        }
+        h2,h3,&__subtitle{
+            margin: 2rem auto;
+            font-family: $ff-secondary;
+            text-transform: uppercase;
+        }
+        h3,&__subtitle{
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: $sec-color;
+            line-height: 2rem;
+            letter-spacing: 3px;
+            span{
+                display: block;
+            }
+        }
+        p,li{
+            font-family: $ff-primary;
+        }
+        h2{
+            font-size: 1.6rem;
+            margin: 4rem auto;
+        }
+        p{
+            max-width: 80%;
+            margin: 0.8rem 0;
+            line-height: 1.5rem;
+        }
+    }
+    &__beneficios{
+        &__item, &__destaque{
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            list-style-type: none;
+            &::before{
+                content: ' ';
+                padding: 1px 12px;
+                position: relative;
+                background-image: url(../../img/checked.png);
+                right: 1rem;
+            }
+        }
+        &__destaque{
+            color: $sec-color;
+        }
+    }
+}
