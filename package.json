@@ -1,0 +1,27 @@
+{
+  "name": "kbr-tech",
+  "version": "1.0.0",
+  "description": "avaliação kbr-tech",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielcavdias/KBR_TECH.git"
+  },
+  "author": "helio dias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielcavdias/KBR_TECH/issues"
+  },
+  "homepage": "https://github.com/gabrielcavdias/KBR_TECH#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-uglifycss": "^1.1.0"
+  },
+  "devDependencies": {
+    "gulp-imagemin": "^7.1.0"
+  }
+}
