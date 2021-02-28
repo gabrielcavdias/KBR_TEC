@@ -2,11 +2,33 @@
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
    overflow-x: hidden;
 }
 img{
     display: block;
+}
+.arredondado{
+    border-radius: 57px;
+    width: 374px;
+    height: 374px;
+}
+
+.arredondado--logo{
+    background-image: $gradiente01;
+    transform: rotate(45deg);
+    position: relative;
+    bottom: 180px;
+    right: 60px;
+}
+@media screen and (min-width: 350px) and (max-width:700px){
+    .arredondado--logo{
+        width: 320px;
+        height: 320px;
+    }
 }
 .btn{
     border-radius: 30px;
@@ -25,5 +47,15 @@ img{
         &:active{
             background-color: darken($sec-color, 10);
         }
+    }
+}
+
+//Tirar as intersções do mobile
+@media screen and (min-width: 350px) and (max-width:700px){
+    .din-na-mao,.superacao__intercede{
+        display: none;
+    }
+    .btn{
+        margin-bottom: 1rem;
     }
 }

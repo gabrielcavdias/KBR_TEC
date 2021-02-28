@@ -1,0 +1,118 @@
+//Interseção
+.superacao__intercede{
+    background-color: #000;
+    img{
+        width: 177px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+        bottom: 5rem;
+    }
+}
+//Avaliacao
+.avaliacao{
+    background-color: #000;
+    color: #fff;
+    min-height: 80vh;
+    position: relative;
+    z-index: 1;
+    *>:not(.arredondado){
+        z-index: 2;
+    }
+    &__arredondados{
+        display: flex;
+        position: relative;
+        bottom: 10rem;
+        .arredondado{
+            transform: rotate(45deg);
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            z-index: -1;
+            &:first-child{
+                left: -6rem;
+                border: 1px solid rgba($color: $main-color, $alpha: 0.2);
+            }
+            &:nth-child(2){
+                left: -9rem;
+                border: 1px solid rgba($color: $main-color, $alpha: 0.4);
+            }
+        }
+    }
+    h2{
+        font-family: $ff-secondary;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    &__descricao{
+        margin: 0 auto;
+        font-family: $ff-primary;
+        width: 45%;
+        text-align: center;
+    }
+    &__pergunta{
+        margin: 2rem 0;
+        text-align: center;
+        font-family: $ff-secondary;
+        font-size: 1.15rem;
+        color: $sec-color;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    &__opcao{
+        display: flex;
+        justify-content: space-between;
+        max-width: 80%;
+        margin: 0 auto;
+        gap: 4rem;
+        font-family: $ff-primary;
+        i{
+            display: block;
+            text-align: center;
+            font-size: 3rem;
+        }
+        .fa-thumbs-up{
+            color: $sec-color;
+        }
+        .fa-thumbs-down{
+            color:  #D40033;
+        }
+        //Descrição das opções da avaliação
+        >div>div{
+            margin-top: 3rem;
+            padding: 44px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        &__positivo{
+            &__descricao{
+                background-color: $sec-color;
+                color: #000;
+            }
+        }
+        &__negativo{
+            &__descricao{
+                background-color: #D40033;
+            }
+        }
+    }
+}
+@media screen and (min-width: 350px) and (max-width:700px){
+    .avaliacao{
+        padding-bottom: 1rem;
+        h2{
+            margin: 2rem 0;
+        }
+        &__descricao{
+            width: 80%;
+        }
+        &__opcao{
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+}

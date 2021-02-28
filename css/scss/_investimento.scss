@@ -1,0 +1,195 @@
+//Interseção
+.din-na-mao{
+    position: relative;
+    bottom: 5rem;
+    left: 2rem;
+    img{
+        margin: 0 auto;
+    }
+}
+//Investimento
+.investimento{  
+    h2, &__subtitle{
+        font-family: $ff-secondary;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+   }
+   h2{
+       font-size: 1.6rem;
+       letter-spacing: 2px;
+   }
+   &__subtitle{
+        display: block;
+        margin-top: 0.8rem;
+        font-size: 1.1rem;
+        letter-spacing: 3px;
+   }
+   &__texto--centralizado{
+       font-family: $ff-primary;
+       margin: 2rem;
+       text-align: center;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       &:nth-of-type(2){
+           margin-top: 4rem;
+       }
+       .quotes{
+           color: $main-color;
+           font-weight: bold;
+           font-size: 6.25rem;
+           margin: 0 2.5rem;    
+       }
+   }
+   &__formacoes{
+       display: flex;
+       justify-content: space-evenly;
+       margin: 8rem;
+       &__formacao{
+        img{
+            margin: 0 auto;
+        }
+        h3{
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 500;
+            font-family: $ff-primary;
+            line-height: 1.5rem;
+            padding: 5px;
+            min-height: 40%;
+            span{
+                display: block;
+            }
+        }
+        &__valor{
+            display: block;
+            margin-top: 1rem;
+            text-align: center;
+            font-family: $ff-secondary;
+            font-weight: 700;
+            font-size: 1.6rem;
+        }
+       }
+   }
+   &__comprar{
+       display: flex;
+       justify-content: center;
+       margin: 10rem 0;
+       gap: 2rem;
+       &__valor{
+            width: 37rem;
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px solid #D40033;;
+            display: flex;
+            font-family: $ff-primary;
+            .comprar__descricao{
+                align-self: center;
+            }
+            .comprar__preco{
+                font-weight: bold;
+                font-family: $ff-secondary;
+                font-size: 2.55rem;
+                align-self: flex-start;
+                margin: 0 1rem;
+            }
+            &--escuro{
+                background-color: #D40033;
+                font-weight: bold;
+                color: #fff;
+            }
+            &--claro{
+                p:first-of-type{
+                    display: flex;
+                }
+                .comprar__descricao{
+                    color: #555;
+                }
+                .comprar__preco{
+                    color: #D40033;
+                }
+           }
+       }
+   }
+   &__opcoes{
+       display: flex;
+       justify-content: space-around;
+       &__opcao{
+           font-family: $ff-primary;
+           width: 40%;
+           font-size: 1.2rem;
+           h3{
+               margin-bottom: 2rem;
+               font-size: 1.6rem;
+               text-transform: uppercase;
+           }
+           &:last-child{
+               margin-top: 3.5rem;
+           }
+           &__texto{
+               color: #555;
+               margin: 1rem 0;
+               strong{
+                   color: #000;
+               }
+               &--destaque{
+                   font-size: 1.7rem;
+                   font-weight: bold;
+                   line-height: 2.5rem;
+               }
+           }
+           &__title{
+               display: block;
+               margin-bottom: 1rem;
+               font-weight: 700;
+           }
+           &__beneficios{
+               list-style-type: none;
+               &__item{
+                   margin: 1rem 0;
+                   color: #555;
+                   &::before{
+                        content: '';
+                        padding: 0 12px;
+                        position: relative;
+                        background-image: url(../../img/checked.png);
+                        right: 10px;
+                   }
+               }
+           }
+       }
+   }
+   .btn{
+       display: block;
+       margin: 6rem auto;
+   }
+}
+@media screen and (min-width: 350px) and (max-width:700px){
+    .investimento{
+        >*{
+            flex-direction: column;
+            gap: 2rem;
+        }
+        &__comprar{
+            &__valor{
+                flex-direction: column;
+                width: 15rem;
+                margin: 0 auto;
+            }
+        }
+        &__texto--centralizado{
+            flex-direction: row;
+            .quotes{
+                margin: 0;
+            }
+            
+        }
+        &__opcoes{
+            &__opcao{
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+}

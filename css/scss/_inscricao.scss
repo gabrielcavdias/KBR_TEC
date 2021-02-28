@@ -27,7 +27,7 @@
         display: flex;
         justify-content: space-around;
         margin: 2rem auto;
-        max-width: 80%;
+        width: 80%;
         &__etapa{
             width: 360px;
             div{
@@ -94,5 +94,39 @@
     //Etapas 05 até 07 e botão de inscreva-se
     &__etapas:nth-of-type(3){
         grid-area: etps02;
+    }
+}
+@media screen and (min-width: 350px) and (max-width:700px){
+    .inscricao{
+        grid-template-areas: 
+        "titulo titulo"
+        "etps01 etps01"
+        "etps01 etps01"
+        "etps02 etps02"
+        "etps02 etps02";       
+        .arredondado{
+            display: none;
+        }
+        &__etapas{
+            flex-direction: column;
+            width: 100%;
+        }
+        //Titulo
+        h2{
+            grid-area: titulo;
+        }
+        //Etapas 01 até 04
+        &__etapas:nth-of-type(2){
+            grid-area: etps01;
+        }
+        //Etapas 05 até 07 e botão de inscreva-se
+        &__etapas:nth-of-type(3){
+            grid-area: etps02;
+        }
+        .inscreva{
+            width: 80%;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
     }
 }

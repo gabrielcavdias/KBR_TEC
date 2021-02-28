@@ -8,12 +8,56 @@ header{
     ".... intro intro  intro intro  ....."
     ".... intro intro  intro intro  .....";
 }
+
+//MEDIA PARA HEADER
+
+@media screen and (min-width: 350px) and (max-width:700px){
+    header{
+        grid-template-areas:
+        "logo ..."
+        "infos ..."
+        "intro intro"
+        "intro intro"
+        ;
+    }
+    .header__logo{
+        grid-area: logo;
+    }
+    .header__infos{
+        grid-area: infos;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        bottom: 4rem;
+        left: 2rem;
+    }
+    .intro{
+        grid-area: intro;
+    }
+}
+//FIM MEDIA PARA HEADER
+
 .header__logo{
     grid-area: logo;
     h1 span{
         display: none;
     }
 }
+
+//MEDIA PARA HEADER__LOGO
+
+@media screen and (min-width: 350px) and (max-width:700px){
+    .header__logo{
+        img{
+            width: 25%;
+            position: absolute;
+            left: 3.5rem;
+        }
+    }
+}
+
+//FIM MEDIA PARA HEADER__LOGO
+
 .header__infos{
     margin-top: 1.5rem;
     grid-area: infos;
@@ -28,8 +72,18 @@ header{
         width: 30px;
     }
 }
+//Media para o ícone em Infos
+
+@media screen and (min-width: 350px) and (max-width:700px){
+    .header__infos>img{
+        display: none;
+    }
+}
+
+//Fim do Media para o ícone em infos
+
+
 .header__img{
-    position: relative;
     position: absolute;
     top: 1rem;
     left: 5rem;
@@ -39,7 +93,11 @@ header{
     padding: 15px 20px;
     color: $sec-color;
     font-weight: 700;
+    display: inline-block;
+    position: relative;
+    right: 3.5rem;
     font-size: 0.94rem;
+    text-decoration: none;
     &:hover{
         background-image: linear-gradient($main-color, lighten($main-color, 15), lighten($main-color, 25));
         color: lighten($sec-color, 20);
@@ -118,4 +176,28 @@ header{
 .intro__arredondados>div{
     transform: rotate(45deg);
     position: relative;
+}
+//MEDIA PARA PARTE PRINCIPAL DA PÁGINA INTRODUTÓRIA
+@media screen and (min-width: 350px) and (max-width:700px){
+    .intro{
+        flex-direction: column;
+        &__apresentacao__texto{
+            text-align: center;
+            margin: 0 auto;
+            width: 80%;
+        }
+        &__destaque{
+            display: inline;
+        }
+        &__apresentacao__pequeno-texto{
+            width: 80%;
+            margin: 2rem auto;
+        }
+        &__arredondados{
+            display: none;
+        }
+        button{
+            margin-bottom: 10rem;
+        }
+    }
 }

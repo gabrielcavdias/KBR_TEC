@@ -1,6 +1,6 @@
 @import 'variables';
 @import 'geral';
-@import 'arredondado';
+//A partir desse ponto os Imports são feitos na ordem que as seções aparecem na tela
 @import 'intro';
 @import 'sobre';
 @import 'superacao';
@@ -8,3 +8,7 @@
 @import 'servicos';
 @import 'inscricao';
 @import 'topicos';
+@import 'investimento';
+@import 'reconhecimento';
+@import 'avaliacao';
+@import 'conclusao';

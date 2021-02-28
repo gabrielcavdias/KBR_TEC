@@ -1,5 +1,5 @@
 .rendimentos{
-    main{
+    &__main{
         display: flex;
         //position: relative;
         width: 100%;
@@ -24,7 +24,7 @@
          color: #fff;
          h2, p{
              width: 50%;
-             margin: 0 auto;
+             margin: 2rem auto;
          }
          p{
             font-family: $ff-primary;
@@ -43,6 +43,8 @@
          background-color: #000;
          width: 50vw;
          display: grid;
+         position: relative;
+         z-index: 1;
          grid-template-areas: 
          ". . linha titulo titulo"
           ". . linha lista   lista"
@@ -71,7 +73,7 @@
             }
         }
          h2{
-             margin-left: 6rem  ;
+             margin-left: 6rem;
              grid-area: titulo;
          }
          &__lista{
@@ -141,6 +143,30 @@
          }
          
      }
+     &__moneysign{
+        color: #fff;
+        font-family: $ff-primary;
+        position: relative;
+        top: 19rem;
+        &--frente{
+            font-size: 3.15rem;
+            color: $sec-color;
+            position: relative;
+            bottom: 2rem;
+            left: 1rem;
+        }
+        &--fundo{
+            font-size: 6.25rem;
+            font-weight: bold;
+            &--preto{
+                position: relative;
+                top: 3rem;
+                z-index: -1;
+                color: #000;
+                text-shadow: rgba($color: #C2FF01, $alpha: 0.3) 2px -1px 0;
+            }
+        }
+     }
     &__footer{
         margin-top: 2rem;
         max-height: 35vh;
@@ -169,5 +195,11 @@
             line-height: 2rem;
             align-self: center;
         }
+    }
+}
+@media screen and (min-width: 350px) and (max-width:700px){
+    //Houveram erros que não consegui corrigir a tempo =/ 
+    .rendimentos{
+        display: none;
     }
 }
